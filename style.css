@@ -1,0 +1,933 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Jost:wght@400;500;600&display=swap");
+
+/* =========================
+   ФИРМЕННЫЕ ЦВЕТА
+   ========================= */
+
+:root {
+  --green: #234a40;
+  --ivory: #f5f1e8;
+  --sand: #c9b79f;
+  --ink: #234a40;
+  --muted: #5f7169;
+  --rule: #d9d5c9;
+}
+
+/* =========================
+   БАЗОВЫЕ СТИЛИ
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font: 15px / 1.75 Inter, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 7px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-weight: 400;
+  line-height: 1.13;
+}
+
+h1 {
+  font-size: clamp(48px, 5.5vw, 84px);
+  letter-spacing: -2px;
+}
+
+h1 em {
+  color: #879084;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: -0.3px;
+}
+
+p {
+  max-width: 510px;
+  margin: 24px 0;
+  color: var(--muted);
+}
+
+/* =========================
+   ШАПКА И ЛОГОТИП
+   ========================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 116px;
+  padding: 0 6%;
+  border-bottom: 1px solid var(--rule);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.brand svg {
+  width: 40px;
+  height: 49px;
+  color: var(--sand);
+}
+
+.brand > span {
+  font: 500 23px / 1.4 Jost, sans-serif;
+  letter-spacing: 3px;
+}
+
+.brand small {
+  display: block;
+  font: 8px / 2 Inter, sans-serif;
+  letter-spacing: 1.65px;
+}
+
+/* =========================
+   НАВИГАЦИЯ
+   ========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+nav a {
+  position: relative;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+nav a[aria-current]::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--sand);
+  content: "";
+}
+
+nav a:last-child {
+  padding: 10px 24px;
+  border: 1px solid var(--green);
+}
+
+nav a:hover {
+  opacity: 0.65;
+}
+
+/* =========================
+   ОБЩИЕ ЭЛЕМЕНТЫ
+   ========================= */
+
+.eyebrow {
+  display: block;
+  font: 500 10px / 1.6 Inter, sans-serif;
+  letter-spacing: 2.1px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.line::before {
+  width: 36px;
+  height: 1px;
+  background: var(--sand);
+  content: "";
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 17px 23px;
+  background: var(--green);
+  color: var(--ivory);
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.button span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.button:hover {
+  background: #356353;
+}
+
+.light {
+  background: var(--sand);
+  color: var(--green);
+}
+
+.light:hover {
+  background: #dfcfb8;
+}
+
+.number {
+  display: block;
+  margin-bottom: 26px;
+  color: #8d7c66;
+  font: 400 12px Jost, sans-serif;
+  letter-spacing: 2px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sand);
+}
+
+/* =========================
+   ACCUEIL — ПЕРВЫЙ ЭКРАН
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 0;
+  padding: 54px 6% 58px;
+}
+
+.hero-copy {
+  padding: 24px 50px 0 0;
+}
+
+.hero h1 {
+  margin: 28px 0 20px;
+}
+
+.hero p {
+  max-width: 400px;
+  font-size: 15px;
+}
+
+.territory {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 42px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-photo {
+  position: relative;
+  min-height: 610px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.65);
+}
+
+.hero-photo::after {
+  position: absolute;
+  inset: 60% 0 0;
+  background: linear-gradient(transparent, #18372cb3);
+  content: "";
+}
+
+.hero-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 26px;
+  left: 30px;
+  color: white;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   ACCUEIL — ВВЕДЕНИЕ
+   ========================= */
+
+.intro {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 80px 6% 60px;
+  border-top: 1px solid var(--rule);
+}
+
+.intro > .eyebrow {
+  padding-top: 13px;
+}
+
+.intro p {
+  max-width: 580px;
+}
+
+/* =========================
+   ACCUEIL — УСЛУГИ
+   ========================= */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 6% 100px;
+  border-top: 1px solid var(--rule);
+}
+
+.services > a {
+  position: relative;
+  padding: 28px 28px 15px 0;
+  transition: background 0.2s;
+}
+
+.services > a + a {
+  padding-left: 32px;
+  border-left: 1px solid var(--rule);
+}
+
+.services p {
+  max-width: 270px;
+  padding-right: 15px;
+  font-size: 13px;
+}
+
+.services .arrow {
+  display: block;
+  font-size: 24px;
+}
+
+.services a:hover {
+  background: #eae8df;
+}
+
+/* =========================
+   БЛОК ПРИЗЫВА К КОНТАКТУ
+   ========================= */
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 64px 6%;
+  background: var(--green);
+  color: var(--ivory);
+}
+
+.cta .eyebrow {
+  margin-bottom: 20px;
+  color: var(--sand);
+}
+
+/* =========================
+   ПОДВАЛ
+   ========================= */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 35px 6%;
+  font-size: 10px;
+}
+
+footer > span:first-child {
+  letter-spacing: 1.8px;
+}
+
+footer b {
+  padding: 0 8px;
+  color: var(--sand);
+}
+
+footer > span:nth-child(2) {
+  color: var(--muted);
+}
+
+/* =========================
+   EXPERTISES — ЗАГОЛОВОК
+   ========================= */
+
+.page-heading {
+  padding: 75px 6% 55px;
+}
+
+.page-heading h1 {
+  margin-top: 30px;
+  font-size: clamp(44px, 4.8vw, 70px);
+}
+
+.page-heading p {
+  max-width: 600px;
+}
+
+/* =========================
+   EXPERTISES — НАПРАВЛЕНИЯ
+   ========================= */
+
+.expert-list {
+  margin: 0 6% 90px;
+}
+
+.expert-list article {
+  display: grid;
+  grid-template-columns: 10% 40% 50%;
+  padding: 44px 0;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 30px;
+}
+
+.expert-list h2 {
+  font-size: 36px;
+}
+
+.expert-list .number {
+  padding-top: 10px;
+}
+
+.expert-list p {
+  margin-top: 0;
+}
+
+.expert-list ul {
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+
+.expert-list li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.expert-list li::before {
+  margin-right: 14px;
+  color: #9e8c75;
+  content: "—";
+}
+
+/* =========================
+   À PROPOS — ПЕРВЫЙ ЭКРАН
+   ========================= */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 0;
+  padding: 70px 6%;
+}
+
+.about-hero > div:last-child {
+  padding: 20px 0 0 65px;
+}
+
+.about-hero h1 {
+  margin-top: 25px;
+  font-size: 62px;
+}
+
+.brand-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 550px;
+  background: var(--green);
+  color: var(--sand);
+}
+
+.brand-panel svg {
+  width: 145px;
+  height: 175px;
+  margin-bottom: 30px;
+}
+
+.brand-panel > span {
+  font: 400 28px Jost, sans-serif;
+  letter-spacing: 4px;
+}
+
+.brand-panel small {
+  margin-top: 20px;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   À PROPOS — ОСНОВАТЕЛЬ
+   ========================= */
+
+.founder {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin: 0 6%;
+  padding: 65px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.founder > div {
+  padding-left: 65px;
+}
+
+.founder-role {
+  display: block;
+  margin-top: 10px;
+  color: #8c7b63;
+  font-size: 12px;
+}
+
+/* =========================
+   À PROPOS — ЦЕННОСТИ
+   ========================= */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding: 45px 6% 70px;
+  background: #eae8de;
+}
+
+.values .number {
+  margin-bottom: 14px;
+}
+
+.values p {
+  font-size: 13px;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 720px;
+  padding: 85px 6% 95px;
+}
+
+.contact h1 {
+  margin: 32px 0;
+}
+
+.contact p {
+  max-width: 410px;
+}
+
+.contact-mark svg {
+  width: 85px;
+  height: 95px;
+  margin-top: 25px;
+  color: var(--sand);
+}
+
+.contact-info {
+  padding: 35px 0 20px 55px;
+  border-left: 1px solid var(--rule);
+}
+
+.contact-info h2 {
+  margin-top: 25px;
+}
+
+.contact-info .role {
+  margin: 8px 0 35px;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--rule);
+  font: 400 24px Jost, sans-serif;
+}
+
+.contact-link:hover {
+  color: #8b765a;
+}
+
+.address {
+  margin: 35px 0;
+}
+
+.address p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* =========================
+   ДОСТУПНОСТЬ
+   ========================= */
+
+.skip {
+  position: absolute;
+  z-index: 5;
+  top: -100px;
+  left: 20px;
+  padding: 10px;
+  background: var(--green);
+  color: white;
+}
+
+.skip:focus {
+  top: 10px;
+}
+
+/* =========================
+   БОЛЬШИЕ ЭКРАНЫ
+   ========================= */
+
+@media (min-width: 1600px) {
+  body {
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-photo {
+    min-height: 700px;
+  }
+}
+
+/* =========================
+   ПЛАНШЕТЫ / НЕБОЛЬШИЕ ЭКРАНЫ
+   ========================= */
+
+@media (max-width: 1000px) {
+  header {
+    height: 105px;
+    padding: 0 5%;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .brand > span {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .brand small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    padding: 40px 5%;
+  }
+
+  .hero-copy {
+    padding-right: 25px;
+  }
+
+  .hero-photo {
+    min-height: 590px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .about-hero > div:last-child,
+  .founder > div {
+    padding-left: 35px;
+  }
+
+  .about-hero h1 {
+    font-size: 48px;
+  }
+
+  .brand-panel > span {
+    font-size: 22px;
+  }
+
+  .cta h2 {
+    font-size: 36px;
+  }
+
+  .contact-info {
+    padding-left: 30px;
+  }
+
+  .contact-link {
+    font-size: 21px;
+  }
+}
+
+/* =========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================= */
+
+@media (max-width: 700px) {
+  header {
+    display: block;
+    height: auto;
+    min-height: 130px;
+    padding: 20px 6%;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand svg {
+    width: 32px;
+    height: 40px;
+  }
+
+  nav {
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  nav a:last-child {
+    padding: 5px 12px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 6%;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .hero h1 {
+    margin-top: 25px;
+  }
+
+  .territory {
+    margin-top: 27px;
+  }
+
+  .hero-photo {
+    min-height: 380px;
+    margin-top: 35px;
+  }
+
+  .intro {
+    display: block;
+    padding: 45px 6% 20px;
+  }
+
+  .intro h2 {
+    margin-top: 25px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
+
+  .services > a,
+  .services > a + a {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--rule);
+    border-left: none;
+  }
+
+  .services h3 br {
+    display: none;
+  }
+
+  .services p {
+    max-width: 90%;
+    margin: 15px 0;
+  }
+
+  .number {
+    margin-bottom: 15px;
+  }
+
+  .services .arrow {
+    position: absolute;
+    top: 35px;
+    right: 5px;
+  }
+
+  .cta {
+    display: block;
+    padding: 45px 6%;
+  }
+
+  .cta .button {
+    margin-top: 25px;
+  }
+
+  .cta h2 {
+    font-size: 34px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px 6%;
+  }
+
+  .page-heading {
+    padding-top: 45px;
+  }
+
+  .page-heading h1 {
+    font-size: 44px;
+  }
+
+  .expert-list article {
+    grid-template-columns: 1fr;
+    padding: 30px 0;
+  }
+
+  .expert-list h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+
+  .expert-list {
+    margin-bottom: 45px;
+  }
+
+  .about-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 40px 6%;
+  }
+
+  .about-hero > div:last-child {
+    padding: 0;
+  }
+
+  .about-hero h1 {
+    font-size: 52px;
+  }
+
+  .brand-panel {
+    min-height: 360px;
+  }
+
+  .brand-panel svg {
+    width: 110px;
+    height: 130px;
+  }
+
+  .founder {
+    display: block;
+    padding: 35px 0;
+  }
+
+  .founder > div {
+    padding: 25px 0 0;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 35px;
+  }
+
+  .values p {
+    margin: 15px 0;
+  }
+
+  .contact {
+    display: block;
+    padding: 40px 6%;
+  }
+
+  .contact-info {
+    margin-top: 35px;
+    padding: 35px 0 0;
+    border-top: 1px solid var(--rule);
+    border-left: 0;
+  }
+
+  .contact-mark {
+    display: none;
+  }
+
+  .contact h1 {
+    font-size: 60px;
+  }
+
+  .contact-link {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   УМЕНЬШЕНИЕ АНИМАЦИИ
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
