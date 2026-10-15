@@ -1,8 +1,76 @@
 <!doctype html>
+<!-- Полный файл: замените старый файл целиком. SEO настроено для astralemania.ch. -->
 <!-- РЕДАКТИРОВАНИЕ: текст этой страницы меняется здесь; оформление — style.css.
      FR и EN — отдельные HTML: при изменениях обновляйте обе языковые версии. -->
 <html lang="fr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Accueil — Astra Lemania</title><meta name="description" content="Astra Lemania — Conseil immobilier, consultation d’entreprises générales et mise en relation à Genève et dans l’arc lémanique."><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script><link rel="alternate" hreflang="fr" href="index.html"><link rel="alternate" hreflang="en" href="en-index.html">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+
+<!-- SEO : titre et description propres à cette page / Название и описание страницы -->
+<title>Astra Lemania SA — Conseil immobilier à Genève</title>
+<meta name="description" content="Astra Lemania SA accompagne les acteurs de l’immobilier et de la construction à Genève : conseil, analyse d’offres et mise en relation.">
+<!-- Canonical : URL principale de cette page, pas celle d’une autre langue -->
+<link rel="canonical" href="https://astralemania.ch/">
+<!-- Versions linguistiques : mêmes liens FR/EN sur les deux pages -->
+<link rel="alternate" hreflang="fr" href="https://astralemania.ch/">
+<link rel="alternate" hreflang="en" href="https://astralemania.ch/en-index.html">
+<link rel="alternate" hreflang="x-default" href="https://astralemania.ch/">
+<!-- Données structurées : entreprise, fondateur et page. Не меняют дизайн. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://astralemania.ch/#organization",
+      "name": "Astra Lemania",
+      "legalName": "Astra Lemania SA",
+      "url": "https://astralemania.ch/",
+      "logo": "https://astralemania.ch/assets/astra-lemania-official-v2.png",
+      "email": "contact@astralemania.ch",
+      "founder": {
+        "@id": "https://astralemania.ch/#mihail-randell"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://astralemania.ch/#mihail-randell",
+      "name": "Mihail Randell",
+      "url": "https://astralemania.ch/a-propos.html",
+      "jobTitle": "Fondateur",
+      "worksFor": {
+        "@id": "https://astralemania.ch/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://astralemania.ch/#website",
+      "url": "https://astralemania.ch/",
+      "name": "Astra Lemania",
+      "publisher": {
+        "@id": "https://astralemania.ch/#organization"
+      },
+      "inLanguage": [
+        "fr",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://astralemania.ch/#webpage",
+      "url": "https://astralemania.ch/",
+      "name": "Astra Lemania SA — Conseil immobilier à Genève",
+      "description": "Astra Lemania SA accompagne les acteurs de l’immobilier et de la construction à Genève : conseil, analyse d’offres et mise en relation.",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://astralemania.ch/#website"
+      },
+      "about": {
+        "@id": "https://astralemania.ch/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a>
 <!-- ШАПКА: логотип, основное меню и FR / EN. Повторяется во всех HTML. -->
@@ -17,7 +85,7 @@
 </header>
 <main id="contenu">
 <!-- ПЕРВЫЙ ЭКРАН: заголовок, описание, кнопка и фоновая иллюстрация -->
-<section class="hero hero-panorama"><div class="hero-copy"><span class="eyebrow line">IMMOBILIER · CONSTRUCTION · CONSEIL</span><h1>Les bonnes rencontres.<br><em>Les bonnes décisions.</em></h1><p>Astra Lemania relie les acteurs de l’immobilier et de la construction pour faire avancer vos projets.</p><a class="button " href="contact.html">Parlons de votre projet<span aria-hidden="true"><span class="link-arrow" aria-hidden="true"><span class="native-arrow">↗</span><svg class="ios-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><div class="territory"><span class="dot"></span> GENÈVE & ARC LÉMANIQUE</div></div>
+<section class="hero hero-panorama"><div class="hero-copy"><span class="eyebrow line">IMMOBILIER · CONSTRUCTION · CONSEIL</span><h1>Les bonnes rencontres.<br><em>Les bonnes décisions.</em></h1><p>Fondée par Mihail Randell, Astra Lemania relie les acteurs de l’immobilier et de la construction pour faire avancer vos projets.</p><a class="button " href="contact.html">Parlons de votre projet<span aria-hidden="true"><span class="link-arrow" aria-hidden="true"><span class="native-arrow">↗</span><svg class="ios-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><div class="territory"><span class="dot"></span> GENÈVE & ARC LÉMANIQUE</div></div>
 <figure class="hero-art">
 <!-- ИЗОБРАЖЕНИЕ: assets/terrasse-leman-original.png. Главная иллюстрация. index.html и en-index.html; .hero-art / .hero-panorama в style.css.
      При замене сохраняйте прозрачность PNG; width/height — реальные размеры файла. -->
@@ -39,3 +107,4 @@
 </footer>
 </body>
 </html>
+
