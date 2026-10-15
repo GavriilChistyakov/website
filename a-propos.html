@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- РЕДАКТИРОВАНИЕ: текст этой страницы меняется здесь; оформление — style.css.
+     FR и EN — отдельные HTML: при изменениях обновляйте обе языковые версии. -->
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>À propos — Astra Lemania</title><meta name="description" content="Astra Lemania — Conseil immobilier, consultation d’entreprises générales et mise en relation à Genève et dans l’arc lémanique."><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script><link rel="alternate" hreflang="fr" href="a-propos.html"><link rel="alternate" hreflang="en" href="en-a-propos.html">
+</head>
+<body><a class="skip" href="#contenu">Aller au contenu</a>
+<!-- ШАПКА: логотип, основное меню и FR / EN. Повторяется во всех HTML. -->
+<header><a class="brand" href="index.html" aria-label="Astra Lemania — Accueil">
+<!-- ИЗОБРАЖЕНИЕ: assets/astra-lemania-official-v2.png. Логотип в шапке всех 8 страниц. src в HTML, размер .brand-logo в style.css.
+     При замене сохраняйте прозрачность PNG; width/height — реальные размеры файла. -->
+<img class="brand-logo" src="assets/astra-lemania-official-v2.png" alt="Astra Lemania — Immobilier · Construction · Conseil" width="2048" height="349"></a>
+<nav aria-label="Navigation principale"><a href="index.html" >Accueil</a><a href="expertises.html" >Expertises</a><a href="a-propos.html" aria-current="page">À propos</a><a href="contact.html" >Contact</a>
+</nav>
+<!-- ЯЗЫК: ссылки ведут на аналогичную страницу другого языка. -->
+<div class="language-switch" aria-label="Langue"><a href="a-propos.html" lang="fr" aria-current="true">FR</a><span aria-hidden="true">/</span><a href="en-a-propos.html" lang="en" hreflang="en">EN</a></div>
+</header>
+<main id="contenu">
+<!-- О КОМПАНИИ: чертёж подключён через CSS, а не img -->
+<section class="about-hero company-section"><div class="company-copy"><span class="eyebrow line">À PROPOS</span><h1>Une conviction :<br><em>la clarté fait<br>avancer.</em></h1><p>Un projet immobilier réunit des ambitions, des contraintes et des métiers différents. Astra Lemania est née de la volonté de mieux les relier.</p><p>Nous apportons un regard transversal sur l’immobilier et la construction, avec une approche directe : comprendre les enjeux, mobiliser les bons interlocuteurs et rendre les choix plus lisibles.</p></div>
+</section>
+<!-- ОСНОВАТЕЛЬ: портрет, биография, контактная кнопка -->
+<section class="founder founder-profile">
+<figure class="founder-portrait">
+<!-- ИЗОБРАЖЕНИЕ: assets/mihail-randell-clean-edge.png. Текущий портрет без белой каймы. a-propos.html и en-a-propos.html; .founder-portrait в style.css.
+     При замене сохраняйте прозрачность PNG; width/height — реальные размеры файла. -->
+<img src="assets/mihail-randell-clean-edge.png" alt="Mihail Randell, fondateur d’Astra Lemania" width="1086" height="1448" fetchpriority="high">
+</figure><div class="founder-copy"><span class="eyebrow line">VOTRE INTERLOCUTEUR</span><h2>Mihail Randell</h2><span class="founder-role">Fondateur d’Astra Lemania</span><p>Son parcours en finance et en développement commercial dans la construction nourrit une double lecture des projets : leur logique économique et les conditions concrètes de leur réalisation.</p><p>Basée à Vésenaz, Astra Lemania accompagne les acteurs immobiliers à Genève et dans l’arc lémanique.</p><a class="button " href="contact.html">Prenons contact<span aria-hidden="true"><span class="link-arrow" aria-hidden="true"><span class="native-arrow">↗</span><svg class="ios-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a></div>
+</section>
+<!-- ЦЕННОСТИ КОМПАНИИ -->
+<section class="values"><div><span class="number">01</span><h3>Clarté</h3><p>Rendre les enjeux compréhensibles et les choix explicites.</p></div><div><span class="number">02</span><h3>Proximité</h3><p>Un interlocuteur impliqué, des échanges simples et directs.</p></div><div><span class="number">03</span><h3>Pragmatisme</h3><p>Des recommandations reliées aux réalités de votre projet.</p></div>
+</section>
+</main>
+<!-- ПОДВАЛ: название, направления и email. Обновляйте на всех страницах. -->
+<footer><span>ASTRA LEMANIA SA <b>·</b> GENÈVE</span><span class="footer-services"><span>Immobilier</span><span aria-hidden="true">·</span><span>Construction</span><span aria-hidden="true">·</span><span>Conseil</span></span><a href="mailto:contact@astralemania.ch">contact@astralemania.ch <span class="link-arrow" aria-hidden="true"><span class="native-arrow">↗</span><svg class="ios-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+</footer>
+</body>
+</html>

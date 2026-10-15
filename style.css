@@ -1,0 +1,1831 @@
+/* ASTRA LEMANIA — ПОЛНЫЙ CSS
+   Цвета: :root в начале файла. Основные шрифты: Montserrat / Nunito Sans.
+   Правила сохранены в исходном порядке. Поздние правила уточняют ранние.
+   ВАЖНО: для изменения итогового вида найдите ПОСЛЕДНЕЕ правило нужного
+   селектора и проверьте @media (мобильные / невысокие экраны).
+   Главная: .hero-panorama, .hero-art; о компании: .company-section;
+   портрет: .founder-portrait; контакты: .contact, .contact-star;
+   логотип: .brand-logo; языки: .language-switch; iOS: .is-ios.
+   Перечень изображений с точными именами — IMAGES.md.
+*/
+
+:root {
+  --green:#234a40;
+  --ivory:#f5f1e8;
+  --sand:#c9b79f;
+  --ink:#234a40;
+  --muted:#5f7169;
+  --rule:#d9d5c9
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth
+}
+
+body {
+  margin:0;
+  background:var(--ivory);
+  color:var(--ink);
+  font:15px/1.75 "Nunito Sans","Myriad Pro",Arial,sans-serif
+}
+
+a {
+  color:inherit;
+  text-decoration:none
+}
+
+a:focus-visible {
+  outline:2px solid currentColor;
+  outline-offset:7px
+}
+
+header {
+  height:116px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  border-bottom:1px solid var(--rule)
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:17px
+}
+
+.brand svg {
+  width:40px;
+  height:49px;
+  color:var(--sand)
+}
+
+.brand>span {
+  font:500 23px/1.4 Montserrat,sans-serif;
+  letter-spacing:3px
+}
+
+.brand small {
+  display:block;
+  font:8px/2 "Nunito Sans","Myriad Pro",sans-serif;
+  letter-spacing:1.65px
+}
+
+nav {
+  display:flex;
+  gap:36px;
+  align-items:center
+}
+
+nav a {
+  font-size:13px;
+  padding:10px 0;
+  position:relative
+}
+
+nav a[aria-current]:after {
+  content:'';
+  height:2px;
+  background:var(--sand);
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0
+}
+
+nav a:last-child {
+  border:1px solid var(--green);
+  padding:10px 24px
+}
+
+nav a:hover {
+  opacity:.65
+}
+
+.eyebrow {
+  font:500 10px/1.6 "Nunito Sans","Myriad Pro",sans-serif;
+  letter-spacing:2.1px;
+  display:block
+}
+
+.line {
+  display:flex;
+  align-items:center;
+  gap:18px
+}
+
+.line:before {
+  content:'';
+  width:36px;
+  height:1px;
+  background:var(--sand)
+}
+
+h1,h2,h3 {
+  font-family:Montserrat,sans-serif;
+  font-weight:400;
+  margin:0;
+  line-height:1.13
+}
+
+h1 {
+  font-size:clamp(48px,5.5vw,84px);
+  letter-spacing:-2px
+}
+
+h1 em {
+  font-style:normal;
+  color:#879084
+}
+
+h2 {
+  font-size:44px;
+  letter-spacing:-1px
+}
+
+h3 {
+  font-size:30px;
+  letter-spacing:-.3px
+}
+
+p {
+  color:var(--muted);
+  margin:24px 0;
+  max-width:510px
+}
+
+.hero {
+  display:grid;
+  grid-template-columns:55% 45%;
+  padding:54px 6% 58px;
+  gap:0
+}
+
+.hero-copy {
+  padding:24px 50px 0 0
+}
+
+.hero h1 {
+  margin:28px 0 20px
+}
+
+.hero p {
+  max-width:400px;
+  font-size:15px
+}
+
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+  background:var(--green);
+  color:var(--ivory);
+  padding:17px 23px;
+  font-size:12px;
+  transition:background .2s
+}
+
+.button span {
+  font-size:22px;
+  line-height:1
+}
+
+.button:hover {
+  background:#356353
+}
+
+.territory {
+  font-size:9px;
+  letter-spacing:2px;
+  margin-top:42px;
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+
+.dot {
+  width:5px;
+  height:5px;
+  background:var(--sand);
+  border-radius:50%
+}
+
+.hero-photo {
+  margin:0;
+  position:relative;
+  min-height:610px;
+  overflow:hidden
+}
+
+.hero-photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  filter:saturate(.65)
+}
+
+.hero-photo:after {
+  content:'';
+  position:absolute;
+  inset:60% 0 0;
+  background:linear-gradient(transparent,#18372cb3)
+}
+
+.hero-photo figcaption {
+  position:absolute;
+  z-index:1;
+  bottom:26px;
+  left:30px;
+  right:20px;
+  color:white;
+  letter-spacing:2px;
+  font-size:9px
+}
+
+.intro {
+  padding:80px 6% 60px;
+  border-top:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:40% 60%
+}
+
+.intro>.eyebrow {
+  padding-top:13px
+}
+
+.intro p {
+  max-width:580px
+}
+
+.services {
+  margin:0 6% 100px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--rule)
+}
+
+.services>a {
+  padding:28px 28px 15px 0;
+  position:relative;
+  transition:background .2s
+}
+
+.services>a+a {
+  padding-left:32px;
+  border-left:1px solid var(--rule)
+}
+
+.number {
+  font:400 12px Montserrat,sans-serif;
+  letter-spacing:2px;
+  color:#8d7c66;
+  display:block;
+  margin-bottom:26px
+}
+
+.services p {
+  font-size:13px;
+  max-width:270px;
+  padding-right:15px
+}
+
+.services .arrow {
+  display:block;
+  font-size:24px
+}
+
+.services a:hover {
+  background:#eae8df
+}
+
+.cta {
+  background:var(--green);
+  color:var(--ivory);
+  padding:64px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px
+}
+
+.cta .eyebrow {
+  color:var(--sand);
+  margin-bottom:20px
+}
+
+.light {
+  background:var(--sand);
+  color:var(--green)
+}
+
+.light:hover {
+  background:#dfcfb8
+}
+
+footer {
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  flex-wrap:wrap;
+  padding:35px 6%;
+  font-size:10px
+}
+
+footer>span:first-child {
+  letter-spacing:1.8px
+}
+
+footer b {
+  color:var(--sand);
+  padding:0 8px
+}
+
+footer>span:nth-child(2) {
+  color:var(--muted)
+}
+
+.page-heading {
+  padding:75px 6% 55px
+}
+
+.page-heading h1 {
+  font-size:clamp(44px,4.8vw,70px);
+  margin-top:30px
+}
+
+.page-heading p {
+  max-width:600px
+}
+
+.expert-list {
+  margin:0 6% 90px
+}
+
+.expert-list article {
+  display:grid;
+  grid-template-columns:10% 40% 50%;
+  padding:44px 0;
+  border-top:1px solid var(--rule);
+  scroll-margin-top:30px
+}
+
+.expert-list h2 {
+  font-size:36px
+}
+
+.expert-list .number {
+  padding-top:10px
+}
+
+.expert-list p {
+  margin-top:0
+}
+
+.expert-list ul {
+  list-style:none;
+  padding:0;
+  font-size:13px
+}
+
+.expert-list li {
+  border-bottom:1px solid var(--rule);
+  padding:11px 0
+}
+
+.expert-list li:before {
+  content:'—';
+  color:#9e8c75;
+  margin-right:14px
+}
+
+.about-hero {
+  display:grid;
+  grid-template-columns:45% 55%;
+  gap:0;
+  padding:70px 6%
+}
+
+.about-hero>div:last-child {
+  padding:20px 0 0 65px
+}
+
+.about-hero h1 {
+  font-size:62px;
+  margin-top:25px
+}
+
+.brand-panel {
+  background:var(--green);
+  color:var(--sand);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:550px
+}
+
+.brand-panel svg {
+  width:145px;
+  height:175px;
+  margin-bottom:30px
+}
+
+.brand-panel>span {
+  font:400 28px Montserrat,sans-serif;
+  letter-spacing:4px
+}
+
+.brand-panel small {
+  font-size:8px;
+  letter-spacing:2px;
+  margin-top:20px
+}
+
+.founder {
+  margin:0 6%;
+  padding:65px 0;
+  border-top:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:45% 55%
+}
+
+.founder>div {
+  padding-left:65px
+}
+
+.founder-role {
+  display:block;
+  color:#8c7b63;
+  margin-top:10px;
+  font-size:12px
+}
+
+.values {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  padding:45px 6% 70px;
+  gap:60px;
+  background:#eae8de
+}
+
+.values .number {
+  margin-bottom:14px
+}
+
+.values p {
+  font-size:13px
+}
+
+.contact {
+  display:grid;
+  grid-template-columns:55% 45%;
+  padding:85px 6% 95px;
+  min-height:720px
+}
+
+.contact h1 {
+  margin:32px 0
+}
+
+.contact p {
+  max-width:410px
+}
+
+.contact-mark svg {
+  height:95px;
+  width:85px;
+  color:var(--sand);
+  margin-top:25px
+}
+
+.contact-info {
+  padding:35px 0 20px 55px;
+  border-left:1px solid var(--rule)
+}
+
+.contact-info h2 {
+  margin-top:25px
+}
+
+.contact-info .role {
+  margin:8px 0 35px
+}
+
+.contact-link {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 0;
+  font:400 24px Montserrat,sans-serif;
+  border-bottom:1px solid var(--rule)
+}
+
+.contact-link:hover {
+  color:#8b765a
+}
+
+.address {
+  margin:35px 0
+}
+
+.address p {
+  font-size:14px;
+  margin:10px 0
+}
+
+.skip {
+  position:absolute;
+  top:-100px;
+  left:20px;
+  background:var(--green);
+  color:white;
+  padding:10px;
+  z-index:5
+}
+
+.skip:focus {
+  top:10px
+}
+
+@media(min-width:1600px) {
+  body {
+    max-width:1600px;
+    margin:auto
+  }
+
+  .hero {
+    padding-top:70px
+  }
+
+  .hero-photo {
+    min-height:700px
+  }
+
+}
+
+@media(max-width:1000px) {
+  header {
+    padding:0 5%;
+    height:105px
+  }
+
+  nav {
+    gap:20px
+  }
+
+  .brand>span {
+    font-size:18px;
+    letter-spacing:2px
+  }
+
+  .brand small {
+    font-size:7px;
+    letter-spacing:1px
+  }
+
+  .hero {
+    padding:40px 5%
+  }
+
+  .hero-copy {
+    padding-right:25px
+  }
+
+  .hero-photo {
+    min-height:590px
+  }
+
+  h1 {
+    font-size:60px
+  }
+
+  .about-hero>div:last-child,.founder>div {
+    padding-left:35px
+  }
+
+  .about-hero h1 {
+    font-size:48px
+  }
+
+  .brand-panel>span {
+    font-size:22px
+  }
+
+  .cta h2 {
+    font-size:36px
+  }
+
+  .contact-info {
+    padding-left:30px
+  }
+
+  .contact-link {
+    font-size:21px
+  }
+
+}
+
+@media(max-width:700px) {
+  header {
+    height:auto;
+    min-height:130px;
+    padding:20px 6%;
+    display:block
+  }
+
+  .brand {
+    justify-content:center
+  }
+
+  .brand svg {
+    width:32px;
+    height:40px
+  }
+
+  nav {
+    justify-content:space-between;
+    margin-top:20px;
+    gap:12px
+  }
+
+  nav a {
+    font-size:12px
+  }
+
+  nav a:last-child {
+    padding:5px 12px
+  }
+
+  .hero {
+    display:flex;
+    flex-direction:column;
+    padding:35px 6%
+  }
+
+  .hero-copy {
+    padding:0
+  }
+
+  .eyebrow {
+    font-size:9px;
+    letter-spacing:1.5px
+  }
+
+  h1 {
+    font-size:60px
+  }
+
+  .hero h1 {
+    margin-top:25px
+  }
+
+  .territory {
+    margin-top:27px
+  }
+
+  .hero-photo {
+    min-height:380px;
+    margin-top:35px
+  }
+
+  .intro {
+    padding:45px 6% 20px;
+    display:block
+  }
+
+  .intro h2 {
+    margin-top:25px
+  }
+
+  h2 {
+    font-size:36px
+  }
+
+  .services {
+    grid-template-columns:1fr;
+    margin-bottom:50px
+  }
+
+  .services>a,.services>a+a {
+    padding:25px 0;
+    border-left:none;
+    border-bottom:1px solid var(--rule)
+  }
+
+  .services h3 br {
+    display:none
+  }
+
+  .services p {
+    max-width:90%;
+    margin:15px 0
+  }
+
+  .number {
+    margin-bottom:15px
+  }
+
+  .services .arrow {
+    position:absolute;
+    right:5px;
+    top:35px
+  }
+
+  .cta {
+    display:block;
+    padding:45px 6%
+  }
+
+  .cta .button {
+    margin-top:25px
+  }
+
+  .cta h2 {
+    font-size:34px
+  }
+
+  footer {
+    gap:12px;
+    flex-direction:column;
+    padding:28px 6%
+  }
+
+  .page-heading {
+    padding-top:45px
+  }
+
+  .page-heading h1 {
+    font-size:44px
+  }
+
+  .expert-list article {
+    grid-template-columns:1fr;
+    padding:30px 0
+  }
+
+  .expert-list h2 {
+    font-size:32px;
+    margin-bottom:24px
+  }
+
+  .expert-list {
+    margin-bottom:45px
+  }
+
+  .about-hero {
+    display:flex;
+    flex-direction:column-reverse;
+    padding:40px 6%;
+    gap:30px
+  }
+
+  .about-hero>div:last-child {
+    padding:0
+  }
+
+  .about-hero h1 {
+    font-size:52px
+  }
+
+  .brand-panel {
+    min-height:360px
+  }
+
+  .brand-panel svg {
+    width:110px;
+    height:130px
+  }
+
+  .founder {
+    display:block;
+    padding:35px 0
+  }
+
+  .founder>div {
+    padding:25px 0 0
+  }
+
+  .values {
+    grid-template-columns:1fr;
+    gap:20px;
+    padding-top:35px
+  }
+
+  .values p {
+    margin:15px 0
+  }
+
+  .contact {
+    display:block;
+    padding:40px 6%
+  }
+
+  .contact-info {
+    border-left:0;
+    border-top:1px solid var(--rule);
+    padding:35px 0 0;
+    margin-top:35px
+  }
+
+  .contact-mark {
+    display:none
+  }
+
+  .contact h1 {
+    font-size:60px
+  }
+
+  .contact-link {
+    font-size:24px
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+
+  * {
+    transition:none!important
+  }
+
+}
+
+/* Contact details and navigation interaction */
+.address p  {
+  font-size: clamp(20px, 1.6vw, 24px);
+  line-height: 1.6;
+  max-width: none;
+}
+
+.contact-link  {
+  font-size: clamp(18px, 1.8vw, 24px);
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+
+.contact-link span  {
+  flex-shrink: 0;
+}
+
+nav a:last-child  {
+  transition: background-color 240ms ease, color 240ms ease, border-color 240ms ease;
+}
+
+nav a:last-child:hover, nav a:last-child:focus-visible  {
+  background-color: var(--green);
+  border-color: var(--green);
+  color: var(--sand);
+  opacity: 1;
+}
+
+/* Gentle text entrance on each page load; no JavaScript required. */
+@keyframes text-rise  {
+  from  {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@media (prefers-reduced-motion: no-preference)  {
+  main :is(h1, h2, h3, p, .eyebrow, .number, .button, .contact-link,     .founder-role, .territory, li),   main .brand-panel > :is(span, small)  {
+    animation: text-rise 650ms cubic-bezier(.22, 1, .36, 1) both;
+  }
+
+  main :is(h1, h2, h3)  {
+    animation-delay: 80ms;
+  }
+
+  main :is(p, .contact-link, .founder-role, li)  {
+    animation-delay: 160ms;
+  }
+
+  main :is(.button, .territory)  {
+    animation-delay: 240ms;
+  }
+
+}
+
+/* About: founder first, company story second. */
+.founder.founder-first  {
+  margin: 0;
+  padding: 70px 6%;
+  border-top: 0;
+  align-items: center;
+  grid-template-columns: 45% 55%;
+}
+
+.founder-first > .founder-copy  {
+  padding: 0 0 0 65px;
+}
+
+.founder-first h1  {
+  font-size: clamp(42px, 4.5vw, 68px);
+  margin-top: 26px;
+}
+
+.founder-first .founder-role  {
+  font-size: 15px;
+}
+
+.founder-portrait  {
+  margin: 0;
+  min-height: 520px;
+  background: #e8e4d9;
+  border: 1px solid var(--rule);
+  border-radius: 46% 46% 6px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #64786c;
+  overflow: hidden;
+}
+
+.portrait-initials  {
+  font: 400 88px/1.2 Montserrat, sans-serif;
+  letter-spacing: 8px;
+}
+
+.founder-portrait figcaption  {
+  margin-top: 20px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.founder-portrait img  {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero.company-section  {
+  grid-template-columns: 55% 45%;
+  border-top: 1px solid var(--rule);
+  align-items: center;
+}
+
+.company-section > .company-copy  {
+  padding: 0 65px 0 0;
+}
+
+.company-section > .brand-panel:last-child  {
+  padding: 40px 20px;
+  min-height: 480px;
+}
+
+.company-copy h2  {
+  margin-top: 25px;
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.company-copy h2 em  {
+  font-style: normal;
+  color: #879084;
+}
+
+@media(max-width: 1000px)  {
+  .founder-first > .founder-copy  {
+    padding-left: 35px;
+  }
+
+  .company-section > .company-copy  {
+    padding-right: 35px;
+  }
+
+  .founder-portrait  {
+    min-height: 460px;
+  }
+
+}
+
+@media(max-width: 700px)  {
+  .founder.founder-first  {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 40px 6%;
+  }
+
+  .founder-portrait  {
+    width: 100%;
+    max-width: 380px;
+    min-height: 400px;
+  }
+
+  .founder-first > .founder-copy  {
+    padding: 0;
+    width: 100%;
+  }
+
+  .about-hero.company-section  {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .company-section > .company-copy  {
+    padding: 0;
+  }
+
+  .company-section > .brand-panel:last-child  {
+    width: 100%;
+    min-height: 340px;
+  }
+
+}
+
+/* Portrait and architectural illustration, matched to the brand palette. */
+.founder-portrait  {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  min-height: 0;
+  justify-self: center;
+  background: #e6dfd3;
+  border: 0;
+}
+
+.founder-portrait img  {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-hero.company-section  {
+  grid-template-columns: 48% 52%;
+}
+
+.company-sketch  {
+  margin: 0;
+  width: 100%;
+  align-self: center;
+}
+
+.company-sketch img  {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  mask-image: radial-gradient(ellipse 72% 76% at center, black 65%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 76% at center, black 65%, transparent 100%);
+}
+
+@media(max-width: 700px)  {
+  .founder-portrait  {
+    max-width: 380px;
+    min-height: 0;
+  }
+
+  .company-sketch  {
+    width: 100%;
+  }
+
+}
+
+/* Contact refinements and footer rhythm. */
+.contact-info .role  {
+  margin: 8px 0 6px;
+}
+
+footer  {
+  align-items: center;
+}
+
+footer .footer-services  {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 3px;
+}
+
+footer .footer-services > [aria-hidden]  {
+  color: #8d7c66;
+}
+
+footer > a  {
+  font-size: 12px;
+}
+
+.contact  {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.contact-star  {
+  position: absolute;
+  z-index: -1;
+  bottom: -260px;
+  left: 0;
+  width: min(64vw, 860px);
+  color: var(--sand);
+  opacity: 0.32;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 40%, black 48%, transparent calc(100% - 260px));
+  mask-image: linear-gradient(to bottom, transparent, black 40%, black 48%, transparent calc(100% - 260px));
+  pointer-events: none;
+}
+
+.contact-star svg  {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width: 700px)  {
+  footer  {
+    align-items: flex-start;
+  }
+
+  footer .footer-services  {
+    column-gap: 10px;
+  }
+
+  .contact-star  {
+    width: 530px;
+    left: auto;
+    right: -110px;
+    bottom: -170px;
+    opacity: 0.2;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 38%, black 46%, transparent calc(100% - 170px));
+    mask-image: linear-gradient(to bottom, transparent, black 38%, black 46%, transparent calc(100% - 170px));
+  }
+
+}
+
+/* About: seamless architectural background, followed by founder portrait. */
+.about-hero.company-section  {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  overflow: hidden;
+  border-top: 0;
+  min-height: 610px;
+  padding: 80px 6%;
+  background: var(--ivory);
+}
+
+.company-section::before  {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -3% 0 auto;
+  width: 67%;
+  background: url("assets/villa-sketch-transparent.png") center right / contain no-repeat;
+  opacity: 0.72;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, transparent 8%, black 35%, black 94%, transparent 100%);
+}
+
+.company-section > .company-copy, .about-hero.company-section > .company-copy:last-child  {
+  width: 44%;
+  padding: 0;
+}
+
+.company-copy h1  {
+  font-size: clamp(38px, 4vw, 58px);
+  margin-top: 25px;
+}
+
+.founder.founder-profile  {
+  margin: 0 6%;
+  padding: 65px 0;
+  border-top: 1px solid var(--rule);
+  grid-template-columns: 45% 55%;
+  align-items: center;
+}
+
+.founder-profile > .founder-copy  {
+  padding: 0 0 0 65px;
+}
+
+.founder-profile h2  {
+  font-size: clamp(38px, 4.5vw, 60px);
+  margin-top: 26px;
+}
+
+.founder-profile .founder-role  {
+  font-size: 15px;
+}
+
+.founder-portrait  {
+  border-radius: 36px 36px 6px 6px;
+}
+
+@media(max-width:1000px)  {
+  .founder-profile > .founder-copy  {
+    padding-left: 35px;
+  }
+
+  .company-section > .company-copy,   .about-hero.company-section > .company-copy:last-child  {
+    width: 48%;
+  }
+
+}
+
+@media(max-width:700px)  {
+  .about-hero.company-section  {
+    min-height: 0;
+    padding: 45px 6% 290px;
+  }
+
+  .company-section > .company-copy,   .about-hero.company-section > .company-copy:last-child  {
+    width: 100%;
+  }
+
+  .company-section::before  {
+    inset: auto 0 0;
+    width: 100%;
+    height: 290px;
+    background-position: bottom center;
+    background-size: contain;
+    opacity: 0.68;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 22%, black 94%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 22%, black 94%, transparent);
+  }
+
+  .founder.founder-profile  {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 0;
+  }
+
+  .founder-profile > .founder-copy  {
+    padding: 0;
+    width: 100%;
+  }
+
+  .founder-portrait  {
+    border-radius: 24px 24px 6px 6px;
+  }
+
+}
+
+/* Balanced intro inset and freestanding portrait. */
+.company-section > .company-copy, .about-hero.company-section > .company-copy:last-child  {
+  margin-left: clamp(24px, 4vw, 65px);
+  width: min(44%, 510px);
+}
+
+.founder-profile .founder-portrait  {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.founder-profile .founder-portrait img  {
+  border-radius: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 94%, transparent 100%);
+}
+
+@media(max-width: 700px)  {
+  .company-section > .company-copy,   .about-hero.company-section > .company-copy:last-child  {
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+/* Typography inspired by the Astra Lemania business card. */
+body  {
+  font-family: "Nunito Sans", "Myriad Pro", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+h1, h2, h3  {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+h1  {
+  letter-spacing: -1.8px;
+}
+
+h2  {
+  letter-spacing: -1px;
+}
+
+h3  {
+  font-size: 28px;
+  letter-spacing: -0.6px;
+}
+
+.brand > span  {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.brand small  {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 7.5px;
+  letter-spacing: 1.5px;
+}
+
+nav a  {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.eyebrow  {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.button  {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.contact-link  {
+  font-family: "Nunito Sans", "Myriad Pro", sans-serif;
+  font-weight: 500;
+}
+
+.founder-profile h2, .contact-info h2  {
+  font-weight: 600;
+}
+
+/* Full-width panoramic entrance, with an unobstructed text area. */
+.hero.hero-panorama  {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: 740px;
+  padding: 78px max(8%, calc((100vw - 1360px) / 2)) 115px;
+  background: var(--ivory);
+}
+
+.hero-panorama .hero-copy  {
+  position: relative;
+  z-index: 2;
+  width: 55%;
+  max-width: 640px;
+  padding: 0;
+}
+
+.hero-panorama h1  {
+  font-size: clamp(44px, 4.5vw, 68px);
+  line-height: 1.13;
+  margin: 30px 0 25px;
+}
+
+.hero-panorama h1 em  {
+  color: #64796b;
+}
+
+.hero-panorama p  {
+  max-width: 410px;
+  font-size: 17px;
+  color: var(--green);
+}
+
+.hero-panorama .territory  {
+  margin-top: 32px;
+  font-size: 10px;
+}
+
+.hero-art  {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.hero-art img  {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 1;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,.06) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.3) 43%, black 66%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,.06) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.3) 43%, black 66%);
+}
+
+.hero-panorama::after  {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  height: 100px;
+  background: linear-gradient(transparent, var(--ivory));
+  pointer-events: none;
+}
+
+@media(min-width:1800px)  {
+  .hero.hero-panorama  {
+    min-height: 800px;
+  }
+
+}
+
+@media(max-width:1000px)  {
+  .brand > span  {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .brand small  {
+    font-size: 6.5px;
+    letter-spacing: 1px;
+  }
+
+  .hero.hero-panorama  {
+    padding: 65px 6% 100px;
+    min-height: 690px;
+  }
+
+  .hero-panorama .hero-copy  {
+    width: 65%;
+  }
+
+  .hero-panorama h1  {
+    font-size: 52px;
+  }
+
+  .hero-panorama .eyebrow  {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+}
+
+@media(max-width:700px)  {
+  .brand > span  {
+    font-size: 17px;
+  }
+
+  nav a  {
+    font-size: 12px;
+  }
+
+  .hero.hero-panorama  {
+    min-height: 0;
+    padding: 40px 6% 310px;
+  }
+
+  .hero-panorama .hero-copy  {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-panorama h1  {
+    font-size: clamp(36px, 8.9vw, 52px);
+    letter-spacing: -1.4px;
+  }
+
+  .hero-panorama p  {
+    font-size: 16px;
+  }
+
+  .hero-panorama .eyebrow  {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-panorama .line  {
+    gap: 10px;
+  }
+
+  .hero-panorama .line::before  {
+    width: 22px;
+    flex-shrink: 0;
+  }
+
+  .hero-art  {
+    inset: auto 0 0;
+    height: 295px;
+  }
+
+  .hero-art img  {
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% bottom;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 28%, black 85%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 28%, black 85%, transparent);
+  }
+
+  .hero-panorama::after  {
+    height: 45px;
+  }
+
+  .eyebrow  {
+    font-size: 9px;
+  }
+
+}
+
+/* Language navigation and platform-specific arrows. */
+header  {
+  gap: 24px;
+}
+
+header nav  {
+  margin-left: auto;
+}
+
+.language-switch  {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font:600 11px Montserrat,sans-serif;
+  flex-shrink:0;
+}
+
+.language-switch > span  {
+  color:var(--sand);
+}
+
+.language-switch a  {
+  padding:8px 0;
+  opacity:.55;
+}
+
+.language-switch a[aria-current]  {
+  opacity:1;
+  border-bottom:1px solid var(--sand);
+}
+
+.ios-arrow  {
+  display:none;
+}
+
+.is-ios .native-arrow  {
+  display:none;
+}
+
+.is-ios .ios-arrow  {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  vertical-align:-.1em;
+}
+
+.is-ios .link-arrow  {
+  display:inline-block;
+  line-height:1;
+}
+
+/* Keep the large star inside the left-hand composition, higher and farther right. */
+.contact-star  {
+  left:8%;
+  bottom:-150px;
+  width:clamp(700px,64vw,860px);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,black 40%,black 55%,transparent calc(100% - 150px));
+  mask-image:linear-gradient(to bottom,transparent,black 40%,black 55%,transparent calc(100% - 150px));
+}
+
+/* Compact first-screen actions for shorter laptop viewports. */
+@media(min-width:701px) and (max-height:850px)  {
+  header  {
+    height:88px;
+  }
+
+  .hero.hero-panorama  {
+    min-height:560px;
+    padding-top:36px;
+    padding-bottom:40px;
+  }
+
+  .hero-panorama h1  {
+    font-size:clamp(38px,4vw,58px);
+    margin:20px 0 18px;
+  }
+
+  .hero-panorama p  {
+    margin:16px 0 20px;
+  }
+
+  .hero-panorama .territory  {
+    margin-top:22px;
+  }
+
+  .contact  {
+    min-height:560px;
+    padding-top:35px;
+    padding-bottom:35px;
+  }
+
+  .contact h1  {
+    font-size:clamp(42px,4.6vw,66px);
+    margin:22px 0;
+  }
+
+  .contact-info  {
+    padding-top:12px;
+  }
+
+  .contact-info h2  {
+    margin-top:16px;
+  }
+
+  .contact-info .address  {
+    margin:20px 0;
+  }
+
+  .contact-info .address p  {
+    font-size:20px;
+    line-height:1.5;
+  }
+
+  .founder.founder-profile  {
+    padding-top:35px;
+    padding-bottom:35px;
+    align-items:start;
+  }
+
+  .founder-profile .founder-portrait  {
+    max-width:340px;
+  }
+
+  .founder-copy p  {
+    margin:16px 0;
+  }
+
+  .founder-profile h2  {
+    font-size:44px;
+  }
+
+  .button  {
+    padding:13px 21px;
+  }
+
+}
+
+@media(max-width:1050px)  {
+  header  {
+    gap:16px;
+  }
+
+  header nav  {
+    gap:18px;
+  }
+
+  .brand small  {
+    font-size:6px;
+    letter-spacing:.7px;
+  }
+
+}
+
+@media(max-width:700px)  {
+  header  {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:12px;
+    min-height:120px;
+    padding-top:16px;
+    padding-bottom:14px;
+  }
+
+  header .brand  {
+    justify-content:flex-start;
+    gap:10px;
+  }
+
+  header nav  {
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100%;
+    margin:0;
+  }
+
+  .language-switch  {
+    grid-column:2;
+    grid-row:1;
+    gap:6px;
+    font-size:10px;
+  }
+
+  .brand > span  {
+    font-size:15px;
+    letter-spacing:1.8px;
+  }
+
+  .brand small  {
+    font-size:5.4px;
+    letter-spacing:.5px;
+  }
+
+  .hero.hero-panorama  {
+    padding:38px 6% 48px;
+    min-height:540px;
+  }
+
+  .hero-panorama .hero-art  {
+    inset:0;
+    height:100%;
+  }
+
+  .hero-panorama .hero-art img  {
+    height:100%;
+    object-fit:cover;
+    object-position:62% bottom;
+    opacity:.19;
+    -webkit-mask-image:linear-gradient(to bottom,transparent,black 25%,black 85%,transparent);
+    mask-image:linear-gradient(to bottom,transparent,black 25%,black 85%,transparent);
+  }
+
+  .hero-panorama h1 em  {
+    color:var(--green);
+  }
+
+  .hero-panorama p  {
+    color:var(--green);
+  }
+
+  .contact-star  {
+    width:530px;
+    left:auto;
+    right:-40px;
+    bottom:-80px;
+    opacity:.2;
+    -webkit-mask-image:linear-gradient(to bottom,transparent,black 38%,black 60%,transparent calc(100% - 80px));
+    mask-image:linear-gradient(to bottom,transparent,black 38%,black 60%,transparent calc(100% - 80px));
+  }
+
+}
+
+/* Official supplied artwork, displayed from lossless original PNG files. */
+header .brand  {
+  flex-shrink:0;
+}
+
+header .brand-logo  {
+  display:block;
+  width:330px;
+  height:auto;
+  max-width:100%;
+}
+
+.contact-star  {
+  mix-blend-mode:multiply;
+}
+
+.contact-star img  {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+@media(max-width:1050px)  {
+  header .brand-logo  {
+    width:270px;
+  }
+
+}
+
+@media(max-width:700px)  {
+  header .brand  {
+    min-width:0;
+  }
+
+  header .brand-logo  {
+    width:250px;
+  }
+
+}
+
+@media(max-width:380px)  {
+  header .brand-logo  {
+    width:220px;
+  }
+
+}
+
